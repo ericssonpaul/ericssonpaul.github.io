@@ -1,1 +1,36 @@
-<center><h1>Nothing here yet...</h1></center>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMDLX0JE0W"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-DMDLX0JE0W');
+        </script>
+    </head>
+    <noscript>Seriously, you aren't using JS in the 21st century?</noscript>
+    <body>
+        <div id="app" class="min-h-screen bg-black text-white">
+            <div id="welcome-page" class="h-screen">
+                <div id="greeting-container" class="text-center p-20">
+                    <span id="typebar" class="font-sans text-center italic font-bold">{{ printText }}</span>
+                </div>
+                <div id="arrow-cont">
+                    <transition name="fade">
+                        <img src="assets/arrow-down.svg" v-if="arrowShow">
+                    </transition>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

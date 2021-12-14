@@ -1,0 +1,46 @@
+
+#typebar {
+    display: inline;
+    border-right: 30px white solid;
+    animation:tb 0.s steps(40) infinite;
+    animation:blink-animation 1s step-start infinite;
+}
+@media (min-width: 623px) {
+    #typebar {
+        font-size: 80px;
+    }
+}
+@media (max-width: 623px) {
+    #typebar {
+        font-size: 120px;
+    }
+}
+@keyframes blink-animation {
+    /* 0% {border-right: 40px white solid; border-left: 40px transparent solid;} */
+    50% {border-right: 30px transparent solid;}
+}
+@keyframes tb {
+
+}
+
+#greeting-container {
+    padding-top: 30vh;
+    padding-bottom: 0;
+}
+#arrow-cont {
+    top: 90vh;
+    position: absolute;
+    width: 100%;
+}
+#arrow-cont img {
+    color: white;
+    display: block;
+    margin: auto;
+    height: 7vh;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .7s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
